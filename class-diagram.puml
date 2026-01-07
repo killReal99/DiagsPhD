@@ -1,0 +1,1024 @@
+@startuml
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #F0F0F0
+skinparam classBorderColor #333333
+
+class Accelerator  {
+    ~lan: String
+    ~ied: String
+    ~path: if 
+        if 
+
+        String
+    ~file: File
+    ~objectMapper: ObjectMapper
+    ~substationMeasures: SubstationMeasures
+    --
+    +quickStart(population:List<SubstationMeasures>, lanRosseti:boolean, iedRosseti:boolean, fstec:int): public static void
+    ~if(): Object
+    ~if(): Object
+    ~File(): new
+    ~ObjectMapper(): new
+    ~for(substationMeasures.getSubstationMeasuresPerYear(:SubstationMeasuresPerYear substationMeasuresPerYear :): Object
+}
+
+class BoundaryIndividualsAdding  {
+    ~D1: Object
+    ~D6: Object
+    ~D10: Object
+    ~D12: Object
+    ~D16: Object
+    ~D22: Object
+    ~D19: Object
+    ~D20: Object
+    ~D21: Object
+    ~improsedMeasures: ImprosedMeasures
+    ~organizationalMeasures: OrganizationalMeasures
+    ~protectionList: List
+    ~ied: IED
+    ~protectionList: List
+    ~ied: IED
+    ~iedList: for 
+        return
+    --
+    +addBoundaryAdding(population:List<SubstationMeasures>, minArch:int, maxArch:int, lanRosseti:boolean, iedRosseti:boolean, fstec:int): public static void
+    ~for(i++:int i = 0; i < archQuantity;): Object
+    ~for(j++:int j = 0; j < 2;): Object
+    ~for(year++:int year = 1; year <= 25;): Object
+    ~if(): Object
+    ~ImprosedMeasures(): new
+    ~OrganizationalMeasures(): new
+    ~IEDGenerator(1:(i +): year, organizationalMeasures, improsedMeasures,
+    ~IEDGenerator(boundaryValue:int, architecture:int, iedRosseti:boolean): public static List
+    ~if(3:architecture ==): Object
+    ... и ещё 14 методов
+}
+
+class Breaker  {
+    ~breakerName: String
+    ~position: int
+}
+
+class BreakersMapGeneration  {
+    ~breakersMap: HashMap generate
+        return
+    --
+    +generate(): public static HashMap
+    ~for(i++:int i = 1; i < 25;): Object
+    ~Breaker(): new
+    ~Probability(): new
+}
+
+class CAPEXEquipment  {
+    ~withoutISFirstArch: float
+    +withoutISSecondArch: float
+    +withoutISThirdArch: float
+    +fromFirstToSecondRebuild: float
+    +fromFirstToThirdRebuild: float
+    +fromSecondToFirstRebuild: float
+    +fromSecondToThirdRebuild: float
+    +fromThirdToFirstRebuild: float
+    +fromThirdToSecondRebuild: float
+    +D2: float
+    +D3: float
+    +D4: float
+    +D5: float
+    +D7: float
+    +D8: float
+    +D9: float
+    +D13: float
+    +D14: float
+    +D15: float
+    +D17: float
+    +D18: float
+    +D19: float
+    +D19Update: float
+    +D20: float
+    +D20Update: float
+    +D21: float
+    +D21Update: float
+    +D23: float
+    +D24: float
+}
+
+class CAPEXSalary  {
+    ~withoutISFirstArch: float
+    +withoutISSecondArch: float
+    +withoutISThirdArch: float
+    +fromFirstToSecondRebuild: float
+    +fromFirstToThirdRebuild: float
+    +fromSecondToFirstRebuild: float
+    +fromSecondToThirdRebuild: float
+    +fromThirdToFirstRebuild: float
+    +fromThirdToSecondRebuild: float
+    +D2: float
+    +D3: float
+    +D4: float
+    +D5: float
+    +D7: float
+    +D8: float
+    +D9: float
+    +D13: float
+    +D14: float
+    +D15: float
+    +D17: float
+    +D18: float
+    +D19: float
+    +D20: float
+    +D21: float
+    +D23: float
+    +D24: float
+}
+
+class CostsCalculation  {
+    ~buildingCAPEX: Object
+    ~buildingCAPEX: Object
+    ~embeddedMeasuresPrice: float
+    ~improsedMeasuresPrice: float
+    ~capexSalary: Object
+    ~capexSalary: Object
+    ~embeddedMeasuresPrice: float
+    ~improsedMeasuresPrice: float
+    ~opexBased: Object
+    ~opexBased: Object
+    ~embeddedMeasuresPrice: float
+    ~improsedMeasuresPrice: float
+    ~organizationalMeasuresPrice: float
+    ~embeddedAmortization: float
+    ~improsedMeasuresAmortization: float
+    ~amortization: float
+    --
+    +capexEquipment(substationMeasuresPerYear:SubstationMeasuresPerYear): public static Float
+    ~if(): Object
+    ~if(): else
+    ~for(substationMeasuresPerYear.getIedList(:IED ied :): Object
+    ~capexSalary(substationMeasuresPerYear:SubstationMeasuresPerYear): public static Float
+    ~if(): Object
+    ~if(): else
+    ~for(substationMeasuresPerYear.getIedList(:IED ied :): Object
+    ~opex(substationMeasuresPerYear:SubstationMeasuresPerYear): public static Float
+    ~if(): Object
+    ... и ещё 3 методов
+}
+
+class Crossing  {
+    ~rouletteWeights: List populationCrossing
+        List
+    ~firstParent: SubstationMeasures
+    ~secondParent: SubstationMeasures
+    ~newSubstationMeasuresList: return
+    ~protectionList: Object
+    ~protectionList: Object
+    ~protectionList: Object
+    ~ied: IED
+    ~architectureType: int
+    ~childOrganizationalMeasures: OrganizationalMeasures
+    ~childImprosedMeasures: ImprosedMeasures
+    ~childIedList: List
+    ~protectionList: List
+    ~name: String
+    ~split: Object
+    ~protectionList: Object
+    ~protectionList: Object
+    ~protectionList: Object
+    ~ied: IED
+    ~protectionList: Object
+    ~protectionList: Object
+    ~protectionList: Object
+    ~ied: IED
+    ~randomNumber: double
+    ~childIedList: List
+    ~D2: int
+    ~D17: int
+    ~protectionList: List
+    ~name: String
+    ~split: Object
+    ~protectionList: Object
+    ~protectionList: Object
+    ~protectionList: Object
+    ~D2: Object
+    ~D17: Object
+    ~D17: Object
+    ~ied: IED
+    ~newStartPoint: int
+    ~index: if 
+                if
+    ~newStartPoint: int
+    ~index: Object
+    ~index: return
+    ~newStartPoint: int getNewStartPoint
+        if 
+        return
+    ~rouletteWeightList: List rouletteWeightCalculation
+        return
+    --
+    +populationCrossing(population:List<SubstationMeasures>, lanRosseti:boolean, iedRosseti:boolean, fstec:int): public static List
+    ~for(population:SubstationMeasures individual :): Object
+    ~for((population.size(:int i = 0; i <): Object
+    ~if(): Object
+    ~if(): Object
+    ~yearSwap(): Object
+    ~insideYearSwap(): Object
+    ~yearSwap(substationMeasuresList:List<SubstationMeasures>, firstParent:SubstationMeasures, secondParent:SubstationMeasures): public static void
+    ~SubstationMeasures(): new
+    ~for(i++:int i = 0; i < 25;): Object
+    ... и ещё 53 методов
+}
+
+class Deletion  {
+    +deletePartOfPopulation(population:List<SubstationMeasures>, populationSize:int): public static void
+    +if(): Object
+    ~for(j++:int j = 0; j < countDeleting;): Object
+}
+
+class EquipmentType  {
+}
+
+class ExcelWriter  {
+    ~path: String
+    ~fileInputStream: FileInputStream
+    ~workbook: Workbook
+    +sheet: Sheet
+    +rowIndex: int
+    +cellIndex: int
+    ~cellIndex: Object
+    ~cellIndex: Object
+    ~cellIndex: Object
+    ~cellIndex: Object
+    ~cellStyleGreen: CellStyle
+    ~cellStyleRed: CellStyle
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: Object
+    ~rowIndex: return
+    --
+    +writeToExcel(population:List<SubstationMeasures>): public static void
+    ~FileInputStream(): new
+    ~if(): Object
+    ~if(): else
+    ~if(): else
+    ~if(): else
+    ~for(population.get(0:SubstationMeasuresPerYear substationMeasuresPerYear :): Object
+    ~for(substationMeasuresPerYear.getIedList(:IED ied :): Object
+    ~try(FileOutputStream(path:OutputStream fileOutputStream = new): Object
+    ~setCellStyle(sheet:Sheet, rowIndex:int, cellIndex:int, colorIndex:boolean, cellStyleGreen:CellStyle, cellStyleRed:CellStyle): public static int
+    ... и ещё 1 методов
+}
+
+class Failure  {
+    ~A1: float
+    ~A3: float
+    ~A5: float
+    ~A7: float
+    ~A9: float
+    ~A11: float
+    ~A13: float
+    ~A15: float
+    ~A17: float
+    +A19: float
+    +A23: float
+    +A29: float
+    +A31: float
+    +A33: float
+    +A35: float
+    +A37: float
+    ~A39: float
+    ~A41: float
+    ~A43: float
+    ~A45: float
+}
+
+class FailureCoefficients  {
+    +failureCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear): public static Failure
+    ~Failure(): new
+}
+
+class FailureTriggeringBus  {
+    ~Psv: float
+    +PotkIED: float
+    ~PotkPds: float
+    ~Potkkom: float
+    ~Pust: float
+    ~Psoft: float
+    ~Pfull: float
+    --
+    +failureTriggeringCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear, iedIndex:int, failure:Failure): public static float
+    ~if(): Object
+    ~if(): Object
+    ~return(Pfull:PneFailure * Pfull * Pkz_vnutr + PneFailure * (1 -): Object
+}
+
+class FailureTriggeringLine  {
+    ~Psv: float
+    +PotkIED: float
+    ~PotkPds: float
+    ~Potkkom: float
+    ~Pust: float
+    ~Psoft: float
+    ~Pfull: float
+    --
+    +failureTriggeringCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear, iedIndex:int, failure:Failure): public static float
+    ~if(): Object
+    ~if(): Object
+    ~return(Pfull:PneFailure * Pfull * Pkz_vnutr + PneFailure * (1 -): Object
+}
+
+class FailureTriggeringTransformer  {
+    ~Psv: float
+    +PotkIED: float
+    ~PotkPds: float
+    ~Potkkom: float
+    ~Pust: float
+    ~Psoft: float
+    ~Pfull: float
+    --
+    +failureTriggeringCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear, iedIndex:int, failure:Failure): public static float
+    ~if(): Object
+    ~if(): Object
+    ~return(Pfull:PneFailure * Pfull * Pkz_vnutr + PneFailure * (1 -): Object
+}
+
+class FalseCoeff  {
+    ~A1: float
+    ~A3: float
+    ~A5: float
+    ~A7: float
+    ~A9: float
+    ~A11: float
+    ~A13: float
+    ~A15: float
+    ~A17: float
+    +A19: float
+    +A21: float
+    +A23: float
+    +A25: float
+    +A27: float
+    +A29: float
+}
+
+class FalseCoefficients  {
+    +falseCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear): public static FalseCoeff
+    ~FalseCoeff(): new
+}
+
+class FalsePositiveBus  {
+    ~Psv: float
+    +Pust: float
+    ~Pupravl: float
+    ~Psoft: float
+    ~Pfull: float
+    --
+    +falsePositiveCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear, iedIndex:int, falseCoeff:FalseCoeff): public static float
+    ~if(): Object
+    ~if(): Object
+}
+
+class FalsePositiveLine  {
+    ~Psv: float
+    +Pust: float
+    ~Pupravl: float
+    ~Psoft: float
+    ~Pfull: float
+    --
+    +falsePositiveCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear, iedIndex:int, falseCoeff:FalseCoeff): public static float
+    ~if(): Object
+    ~if(): Object
+}
+
+class FalsePositiveTransformer  {
+    ~Psv: float
+    +Pust: float
+    ~Pupravl: float
+    ~Psoft: float
+    ~Pfull: float
+    --
+    +falsePositiveCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear, iedIndex:int, falseCoeff:FalseCoeff): public static float
+    ~if(): Object
+    ~if(): Object
+}
+
+class GeneralCoefficients  {
+    ~A2: float
+    ~A4: float
+    +A6: float
+    +A8: float
+    +A10: float
+    +A12: float
+    +A14: float
+    +A16: float
+    +A18: float
+    +A20: float
+    +A22: float
+    +A24: float
+    +A26: float
+    +A28: float
+    +A30: float
+    +A32: float
+    +A34: float
+    +A36: float
+    +A38: float
+    +A40: float
+    +A42: float
+    +A44: float
+    +A46: float
+    +D1: float
+    +D2: float
+    +D3: float
+    +D4: float
+    +D5: float
+    +D6: float
+    +D7: float
+    +D8: float
+    +D9: float
+    +D10: float
+    +D11: float
+    +D12: float
+    +D13: float
+    +D14: float
+    +D15: float
+    +D16: float
+    +D17: float
+    +D18: float
+    +D19: float
+    +D20: float
+    +D21: float
+    +D22: float
+    +D23: float
+    +D24: float
+    +PneOver: float
+    +PneFalse: float
+    +PneFailure: float
+    +Pkz: float
+    +Pkz_vnutr: float
+    +yearsToAttack: double
+    +PkzKa: float
+    +PkzKa_vnutr: float
+    +qapv: float
+    +attackedIED: int
+    +Crem: float
+}
+
+class HibernateSessionFactoryUtil  {
+}
+
+class IED  {
+    ~id: UUID
+    ~nameOfIED: String
+    ~equipmentTypeName: EquipmentType
+    +protections: List
+    -D2: int
+    -D4: int
+    -D5: int
+    -D8: int
+    ~D9: int
+    ~D13: int
+    -D14: int
+    -D15: int
+    -D17: int
+    ~D18: int
+    ~D23: int
+    ~failureTriggering: float
+}
+
+class IEDImpact  {
+    ~breaker: Breaker
+    ~iedList: List
+}
+
+class IEDImpactGeneration  {
+    ~iedImpactList: return
+    --
+    +generate(breakersMap:Probability>): public static List
+    ~while(): Object
+    ~IEDImpact(): new
+    ~if(): Object
+    ~if(): else
+    ~if(): else
+    ~if(): else
+    ~if(): else
+    ~if(): else
+    ~if(): else
+    ... и ещё 17 методов
+}
+
+class ImprosedMeasures  {
+    ~id: UUID
+    ~D3: int
+    +D7: int
+    -D11: int
+    -D19: int
+    ~D20: int
+    -D21: int
+    -D24: int
+    --
+    -РЗА(точек:антивирус и/или система защиты конечных): СЗИ на АРМ инженера
+}
+
+class Main  {
+    ~startTime: long
+    ~minArch: int
+    ~maxArch: int
+    ~singleCriteria: SingleCriteria
+    ~weightScenario: WeightScenario
+    ~lanRosseti: boolean
+    ~iedRosseti: boolean
+    ~fstec: int
+    ~populationSize: int
+    ~numberOfIterations: int
+    ~bestIndividuals: List
+    ~weightCoeff: WeightCoeff
+    +schemaStatusList: List
+    +breakersMap: HashMap
+    ~iedImpactList: List
+    ~population: List
+    ~previousValueOfTotalPrice: float
+    ~priceIterator: int
+    ~previousValueOfTotalPrice: Object
+    ~endTime: long
+    --
+    +main(args:String[]): public static void
+    ~WeightCoeff(): new
+    ~for(i++:int i = 0; i < populationSize;): Object
+    ~evaluatePopulationParallel(): Object
+    ~for(i++:int i = 0; i < numberOfIterations;): Object
+    ~if(0.1:priceIterator != numberOfIterations *): Object
+    ~if(0.05:priceIterator >= numberOfIterations *): Object
+    ~for((int:int d = 0; d <): Object
+    ~if((int:i ==): Object
+    ~evaluatePopulationParallel(): Object
+    ... и ещё 4 методов
+}
+
+class MockUndersupplyCalculation  {
+    ~newBreakersMap: HashMap
+    +undersupplyOverTrigger: float
+    +undersupplyFalsePositive: float
+    +undersupplyFailureTrigger: float
+    ~transformerFailure: float
+    ~recoveryTime: float
+    ~rpaCurrentReserve: Object
+    ~rpaNeighborsMain: Object
+    ~rpaNeighborsReserve: Object
+    ~newBreakersMap: return
+    ~break: Object
+    ~recoveryTime: return
+    --
+    +undersupplyCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear, breakersMap:Probability>, iedImpactList:List<IEDImpact>, schemaStatusList:List<SchemaStatus>): public static float
+    ~for(substationMeasuresPerYear.getIedList(:IED ied :): Object
+    ~if(): Object
+    ~for(ied.getProtections(:Protection protection :): Object
+    ~if(): Object
+    ~for(ied.getProtections(:Protection protection :): Object
+    ~if(): Object
+    ~for(ied.getProtections(:Protection protection :): Object
+    ~for(schemaStatusList:SchemaStatus schemaStatus :): Object
+    ~for(schemaStatus.getBreakers(:Breaker breaker :): Object
+    ... и ещё 76 методов
+}
+
+class Mutating  {
+    ~numberOfEmbeddedMeauseres: int
+    ~break: Object
+    ~break: Object
+    ~break: Object
+    ~break: Object
+    ~break: Object
+    ~break: Object
+    ~break: Object
+    ~break: Object
+    ~break: Object
+    ~break: Object
+    ~break: Object
+    ~0: return
+    --
+    +mutatePopulation(population:List<SubstationMeasures>, mutationProbability:float, minArch:int, maxArch:int, lanRosseti:boolean, iedRosseti:boolean, fstec:int): public static void
+    ~for(population:SubstationMeasures substationMeasures :): Object
+    ~if(): Object
+    ~if(0.9:mutationAlgorithm <): Object
+    ~onePointMutation(): Object
+    ~blockMutation(): Object
+    ~onePointMutation(substationMeasures:SubstationMeasures, randomYear:int, minArch:int, maxArch:int, lanRosseti:boolean, iedRosseti:boolean, fstec:int): public static void
+    ~if(countOfChromosomes:randomChromosome <= 1.0 /): Object
+    ~setArchitectureType(): Object
+    ~if(): Object
+    ... и ещё 79 методов
+}
+
+class OPEX  {
+    ~withoutISFirstArch: float
+    +withoutISSecondArch: float
+    +withoutISThirdArch: float
+    +D1: float
+    +D2: float
+    +D3: float
+    +D4: float
+    +D5: float
+    +D6: float
+    +D7: float
+    +D8: float
+    +D9: float
+    +D10: float
+    +D11: float
+    +D12: float
+    +D13: float
+    +D14: float
+    +D15: float
+    +D16: float
+    +D17: float
+    +D18: float
+    +D19: float
+    +D20: float
+    +D21: float
+    +D22: float
+    +D23: float
+    +D24: float
+}
+
+class OptimizeGenotype  {
+    ~reCalculate: return
+    ~reCalculate: return
+    +reCalculate: return
+    --
+    +genotypeOptimization(substationMeasuresList:List<SubstationMeasures>): public static void
+    +for(substationMeasuresList:SubstationMeasures substationMeasures :): Object
+    ~if(antivirusReCalculate:idsReCalculate || firewallReCalculate ||): Object
+    ~for(substationMeasures.getSubstationMeasuresPerYear(:SubstationMeasuresPerYear substationMeasuresPerYear :): Object
+    ~idsOptimization(substationMeasures:SubstationMeasures): public static boolean
+    ~for(substationMeasures.getSubstationMeasuresPerYear(:SubstationMeasuresPerYear substationMeasuresPerYear :): Object
+    ~if(substationMeasuresPerYear.getImprosedMeasures(:idsCheck == 0 &&): Object
+    ~if(10:idsCheck > 0 && idsCheck <=): Object
+    ~if(10:idsCheck ==): Object
+    ~firewallOptimization(substationMeasures:SubstationMeasures): public static boolean
+    ... и ещё 9 методов
+}
+
+class OrganizationalMeasures  {
+    ~id: UUID
+    ~D1: int
+    +D6: int
+    ~D10: int
+    ~D12: int
+    ~D16: int
+    ~D22: int
+}
+
+class Over  {
+    ~A1: float
+    ~A3: float
+    ~A5: float
+    ~A7: float
+    ~A9: float
+    ~A11: float
+    ~A13: float
+    ~A15: float
+    ~A17: float
+    +A19: float
+}
+
+class OverCoefficients  {
+    +overCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear): public static Over
+    ~Over(): new
+}
+
+class OverTriggeringBus  {
+    ~Psv: float
+    ~Pust: float
+    ~Psoft: float
+    ~Pfull: float
+    --
+    +overTriggeringCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear, iedIndex:int, over:Over): public static float
+    ~if(): Object
+    ~if(): Object
+}
+
+class OverTriggeringLine  {
+    ~Psv: float
+    ~Pust: float
+    ~Psoft: float
+    ~Pfull: float
+    --
+    +overTriggeringCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear, iedIndex:int, over:Over): public static float
+    ~if(): Object
+    ~if(): Object
+}
+
+class OverTriggeringTransformer  {
+    ~Psv: float
+    ~Pust: float
+    ~Psoft: float
+    ~Pfull: float
+    --
+    +overTriggeringCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear, iedIndex:int, over:Over): public static float
+    ~if(): Object
+    ~if(): Object
+}
+
+class PopulationGeneration  {
+    ~D19: Object
+    ~D20: Object
+    ~D21: Object
+    ~improsedMeasures: ImprosedMeasures
+    ~organizationalMeasures: OrganizationalMeasures
+    ~protectionList: for  else if 
+                    if 
+                    List
+    ~ied: IED
+    ~protectionList: if  else if 
+                if 
+                List
+    ~ied: IED
+    ~protectionList: for  else if 
+                    if 
+                    List
+    ~ied: IED
+    ~protectionList: if  else if 
+                if 
+                List
+    ~ied: IED
+    ~protectionList: for  else if 
+            if 
+            List
+    ~ied: IED
+    ~iedList: return
+    --
+    +generatePopulation(minArch:int, maxArch:int, lanRosseti:boolean, iedRosseti:boolean, fstec:int): public static SubstationMeasures
+    ~for(year++:int year = 1; year <= 25;): Object
+    ~if(): Object
+    ~ImprosedMeasures(): new
+    ~OrganizationalMeasures(): new
+    ~IEDGenerator(): architecture, year, organizationalMeasures, improsedMeasures,
+    ~IEDGenerator(architecture:int, iedRosseti:boolean): public static List
+    ~if(): Object
+    ~for(i++:int i = 1; i < 17;): 110 kV
+    ~if(5:i <): Object
+    ... и ещё 25 методов
+}
+
+class Probability  {
+    ~overTriggerProbability: float
+    ~falsePositiveProbability: float
+    ~failureTriggerProbablility: float
+}
+
+class ProbabilityUnion  {
+    ~MAX_PARAMS: int
+    ~PRECISION_THRESHOLD: float
+    ~MAX_CACHE_SIZE: int
+    ~PARALLEL_THRESHOLD: int
+    +cache: Map
+    -customPool: ForkJoinPool
+    -hash: int
+    ~key: CacheKey
+    ~cached: Float
+    -result: float
+    ~result: synchronized 
+        return
+    ~product: float
+    +product: float computeProduct
+
+        return
+    --
+    ~removeEldestEntry(eldest:Float>): protected boolean
+    #size(): return
+    -ForkJoinPool(): new
+    -CacheKey(probs:float[]): public
+    ~equals(o:Object): public boolean
+    +if(o:this ==): Object
+    +if(CacheKey:!(o instanceof): Object
+    ~hashCode(): public int
+    +calculateProbability(probs:float...): public static float
+    +if(0:probs == null || probs.length ==): Проверка входных данных
+    ... и ещё 37 методов
+}
+
+class Protection  {
+    ~id: UUID
+    ~protectionType: ProtectionType
+    ~equipmentType: EquipmentType
+    ~falsePositive: float
+    ~overTriggering: float
+}
+
+class ProtectionType  {
+}
+
+class ProtectionsSet  {
+    ~protectionList: return
+    ~protectionList: return
+    --
+    +lineProtectionsGeneration(number:int): public static List
+    ~if(5:number <): Object
+    ~busProtectionsGeneration(number:int): public static List
+    ~if(5:number <): Object
+    ~transformerProtectionsGeneration(): public static List
+}
+
+class ReadSchemStatus  {
+    ~file: File
+    ~objectMapper: ObjectMapper
+    ~schemaStatus: List
+    ~schemaStatus: return
+    --
+    +readSchem(): public static List
+    +File(): new
+    ~ObjectMapper(): new
+}
+
+class ReliabilityCalculation  {
+    ~sumOfCoeffs: float
+    ~damageCoeff: Object
+    ~capexCoeff: Object
+    ~opexCoeff: Object
+    +idsCheck: Object
+    ~firewallCheck: Object
+    ~antivirusCheck: Object
+    ~arch: Object
+    --
+    +goalFunctionCalculation(substationMeasuresList:List<SubstationMeasures>, breakersMap:Probability>, iedImpactList:List<IEDImpact>, schemaStatusList:List<SchemaStatus>, weightScenario:WeightScenario, weightCoeff:WeightCoeff): public static void
+    ~if(WeightScenario.Equal:weightScenario ==): Object
+    ~if(WeightScenario.Direct:weightScenario ==): else
+    ~for(substationMeasuresList:SubstationMeasures substationMeasure :): Object
+    ~if(): Object
+    ~idsCheck(): Object
+    ~firewallCheck(): Object
+    ~antivirusCheck(): Object
+    ~archCheck(): Object
+    ~iedCheck(): Object
+    ... и ещё 50 методов
+}
+
+class ResultsMapping  {
+    ~writer: PrintWriter
+    ~writer2: PrintWriter
+    ~iteration: int
+    ~optimize: String
+    ~lan: String
+    ~ied: String
+    ~fstec: int
+    ~lan: Object
+    ~ied: Object
+    ~fstec: Object
+    ~jsonObj: PrintWriter
+    --
+    +resultsMapping(population:List<SubstationMeasures>, bestIndividuals:List<SubstationMeasures>): public static void
+    ~PrintWriter("results.txt":"src" + File.separator + "main" + File.separator +
+                "resources" + File.separator +): new
+    ~for(population.get(0:SubstationMeasuresPerYear substationMeasuresPerYear :): Object
+    ~if(): Object
+    ~if(): Object
+    ~if(): Object
+    ~if(): Object
+    ~if(): Object
+    ~if(): Object
+    ~if(): Object
+    ... и ещё 26 методов
+}
+
+class RoulettePart  {
+    ~index: int
+    ~leftPart: float
+    ~rightPart: float
+}
+
+class SchemaStatus  {
+    ~breakers: List
+    ~undersupply: float
+}
+
+class Selection  {
+    +selectionOfSuitableIndividuals(population:List<SubstationMeasures>): public static void
+    ~for(population:SubstationMeasures substationMeasures :): Object
+    ~SubstationMeasures(): new
+    ~if(): Object
+    ~for(substationMeasures.getSubstationMeasuresPerYear(:SubstationMeasuresPerYear substationMeasuresPerYear :): Object
+    ~if(): Object
+    ~if(): Object
+    ~if(): Object
+    ~if(): Object
+    ~for(populationForDeleting:SubstationMeasures deletingIndividual :): Object
+}
+
+class SingleCriteria  {
+}
+
+class Sorting  {
+    ~break: Object
+    +pivot: Object
+    +temp: SubstationMeasures
+    ~i: int
+    ~temp: Object
+    ~temp: Object
+    --
+    +bubbleSort(population:List<SubstationMeasures>): public static void
+    ~for(population.size(:int i = 0; i <): Object
+    ~for(population.size(:int j = 0; j <): Object
+    ~if(): Object
+    ~if(): Object
+    ~quickSort(population:List<SubstationMeasures>, low:int, high:int, singleCriteria:SingleCriteria): public static void
+    ~if(high:low <): Object
+    ~quickSort(1:pi -): Object
+    ~quickSort(1:pi +): Object
+    ~partition(population:List<SubstationMeasures>, low:int, high:int, singleCriteria:SingleCriteria): private static int
+    ... и ещё 7 методов
+}
+
+class SubstationMeasures  {
+    ~id: UUID
+    ~totalPrice: float
+    ~damage: float
+    ~opexPrice: float
+    ~capexPrice: float
+    +lanRosseti: boolean
+    +iedRosseti: boolean
+    -fstec: int
+    -substationMeasuresPerYear: List
+}
+
+class SubstationMeasuresGenearation  {
+    +substationMeasuresGeneration(substationMeasuresPerYear:List<SubstationMeasuresPerYear>, lanRosseti:boolean, iedRosseti:boolean, fstec:int): public static SubstationMeasures
+    ~SubstationMeasures(): new
+}
+
+class SubstationMeasuresPerYear  {
+    ~id: UUID
+    ~totalPrice: float
+    ~opexPrice: float
+    ~capexPrice: float
+    ~architectureType: int
+    +yearNumber: int
+    -organizationalMeasures: OrganizationalMeasures
+    -improsedMeasures: ImprosedMeasures
+    -iedList: List
+}
+
+class SubstationMeasuresPerYearGeneration  {
+    +substationMeasuresGeneration(architectureType:int, yearNumber:int, organizationalMeasures:OrganizationalMeasures, improsedMeasures:ImprosedMeasures, iedList:List<IED>): public static SubstationMeasuresPerYear
+    ~SubstationMeasuresPerYear(): new
+    ~economicPerYearCalculation(): Object
+    ~economicPerYearCalculation(substationMeasuresPerYear:SubstationMeasuresPerYear): public static void
+    +if(): Object
+}
+
+class WeightCoeff  {
+    ~maxDamage: float
+    ~mixDamage: float
+    ~maxCAPEX: float
+    ~minCAPEX: float
+    ~maxOPEX: float
+    +minOPEX: float
+}
+
+class WeightCoeffCalculation  {
+    +calculateWeights(population:List<SubstationMeasures>, breakersMap:Probability>, iedImpactList:List<IEDImpact>, schemaStatusList:List<SchemaStatus>, weightCoeff:WeightCoeff): public static void
+    ~for(population.get(0:SubstationMeasuresPerYear substationMeasuresPerYear :): Object
+    ~for(population.get(population.size(:SubstationMeasuresPerYear substationMeasuresPerYear :): Object
+}
+
+class WeightScenario  {
+}
+
+
+Main --> SingleCriteria
+Main --> WeightScenario
+Main --> WeightCoeff
+BoundaryIndividualsAdding --> ImprosedMeasures
+BoundaryIndividualsAdding --> OrganizationalMeasures
+BoundaryIndividualsAdding --> IED
+Crossing --> SubstationMeasures
+Crossing --> IED
+Crossing --> OrganizationalMeasures
+Crossing --> ImprosedMeasures
+PopulationGeneration --> ImprosedMeasures
+PopulationGeneration --> OrganizationalMeasures
+PopulationGeneration --> IED
+Sorting --> SubstationMeasures
+Accelerator --> SubstationMeasures
+IED --> EquipmentType
+IEDImpact --> Breaker
+Protection --> ProtectionType
+Protection --> EquipmentType
+SubstationMeasuresPerYear --> OrganizationalMeasures
+SubstationMeasuresPerYear --> ImprosedMeasures
+@enduml
