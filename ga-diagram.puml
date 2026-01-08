@@ -1,0 +1,172 @@
+@startuml "Power System Optimization - Full Architecture"
+!theme plain
+skinparam {
+    BackgroundColor #ffffff
+    ArrowColor #2d5f2e
+    ClassBackgroundColor #d9e8d9
+    ClassBorderColor #2d5f2e
+    ClassFontColor #1e3d1f
+    InterfaceBackgroundColor #c4dcc4
+    InterfaceBorderColor #1e3d1f
+    InterfaceFontColor #1e3d1f
+    EnumBackgroundColor #b3d6b3
+    EnumBorderColor #1e3d1f
+    EnumFontColor #1e3d1f
+    DefaultFontSize 10
+    DefaultFontName Arial
+    Shadowing false
+}
+
+' ==================== MAIN ENTRY POINT ====================
+class Main {
+    - OPTIMIZATION_SEED: long {static}
+    - POPULATION_SIZE: int {static}
+    - GENERATIONS: int {static}
+    - logger: Logger {static}
+    + main(String[]): void {static}
+    - loadOptimizationConfig(): void {static}
+    - initializeDatabase(): void {static}
+    - loadNetworkData(): void {static}
+    - startOptimizationEngine(): void {static}
+    - generateResults(): void {static}
+    - handleShutdown(): void {static}
+}
+
+' ==================== EQUIPMENT & PROTECTION CLASSES ====================
+class IED {
+    - iedId: String
+    - name: String
+    - relaySettings: Protection
+    - impacts: List<IEDImpact>
+    + processImpact(IEDImpact): void
+    + getImpactList(): List<IEDImpact>
+}
+
+' ==================== GENETIC ALGORITHM CLASSES ====================
+class Crossing {
+    - parent1Genotype: List<Integer>
+    - parent2Genotype: List<Integer>
+    + applyCrossing(): List<Integer>
+    + singlePointCrossing(): List<Integer>
+    + twoPointCrossing(): List<Integer>
+    + uniformCrossing(): List<Integer>
+}
+
+class Mutating {
+    - genotype: List<Integer>
+    - mutationRate: double
+    + applyMutation(): List<Integer>
+    + bitFlipMutation(): void
+    + swapMutation(): void
+    + inversionMutation(): void
+}
+
+class Selection {
+    - population: List<Individual>
+    + tournamentSelection(): Individual
+    + rouletteSelection(): Individual
+}
+
+class Sorting {
+    - population: List<Individual>
+    + sortByFitness(): void
+    + sortByConstraints(): void
+}
+
+class PopulationGeneration {
+    - populationSize: int
+    + generateInitialPopulation(): List<Individual>
+    + generateRandomIndividual(): Individual
+}
+
+class BoundaryIndividualsAdding {
+    - population: List<Individual>
+    + addBoundaryIndividuals(): void
+}
+
+class Deletion {
+    - population: List<Individual>
+    + removeWorstIndividuals(): void
+}
+
+class OptimizeGenotype {
+    - genotype: List<Integer>
+    + optimizeGenotype(): List<Integer>
+}
+
+' ==================== GENERATION & INITIALIZATION CLASSES ====================
+class IEDImpactGeneration {
+    - iedImpacts: List<IEDImpact>
+    + generateImpacts(): List<IEDImpact>
+    + initializeImpactLibrary(): void
+}
+
+class SubstationMeasuresPerYearGeneration {
+    - measuresPerYear: Map<Integer, List<SubstationMeasures>>
+    + generateMeasuresPerYear(): Map
+}
+
+' ==================== MEASURES CLASSES ====================
+class SubstationMeasures {
+    - measureId: String
+    - type: String
+    - cost: double
+    + calculateCost(): double
+}
+
+class SubstationMeasuresPerYear {
+    - year: int
+    - measures: List<SubstationMeasures>
+    + getMeasuresForYear(): List<SubstationMeasures>
+}
+
+class OrganizationalMeasures {
+    - description: String
+    - impact: double
+    + execute(): void
+}
+
+class ImprosedMeasures {
+    - measureName: String
+    - reliabilityImprovement: double
+    + applyMeasure(): void
+}
+
+' ==================== UTILITY & DATA CLASSES ====================
+class RoulettePart {
+    - part: double
+}
+
+' ==================== I/O & UTILITY CLASSES ====================
+class HibernateSessionFactoryUtil {
+    - sessionFactory: SessionFactory {static}
+    + getSessionFactory(): SessionFactory {static}
+}
+
+' ==================== RELATIONSHIPS ====================
+
+' Main dependencies
+Main --> PopulationGeneration : uses
+Main --> HibernateSessionFactoryUtil : uses
+
+' Genetic Algorithm
+Crossing --> PopulationGeneration : uses
+Mutating --> Selection : uses
+Selection --> Sorting : follows
+Sorting --> BoundaryIndividualsAdding : uses
+BoundaryIndividualsAdding --> Deletion : uses
+OptimizeGenotype --> Mutating : applies
+
+' Generation classes
+IEDImpactGeneration --> IED : initializes
+SubstationMeasuresPerYearGeneration --> SubstationMeasuresPerYear : generates
+
+' Measures relationships
+SubstationMeasures --> OrganizationalMeasures : may_be
+SubstationMeasuresPerYear --> SubstationMeasures : contains
+OrganizationalMeasures --> ImprosedMeasures : includes
+
+' Support classes
+RoulettePart --|> Selection : used_by
+
+@enduml

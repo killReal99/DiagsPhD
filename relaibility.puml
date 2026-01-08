@@ -1,0 +1,128 @@
+@startuml Vertical Architecture Diagram
+!define DIRECTION top to bottom direction
+skinparam direction top to bottom
+skinparam classBorderColor #2C7A7B
+skinparam arrowColor #2C7A7B
+skinparam classAttributeIconSize 0
+
+    class Main {
+        + main(args: String[]): void
+        + configureRelayProtection(): void
+        + generateResults(): void
+    }
+
+        class ReliabilityCalculation {
+            + calculate(): double
+            + getIndex(): double
+        }
+        
+        class GeneralCoefficients {
+            + get(): double
+        }
+        
+        class FailureCoefficients {
+            + get(): double
+        }
+        
+        class OverCoefficients {
+            + get(): double
+        }
+        
+        class FalseCoefficients {
+            + get(): double
+        }
+        
+        class ProbabilityUnion {
+            + union(): double
+        }
+
+        class MockUndersupplyCalculation {
+            + calculate(): double
+        }
+
+        class IEDImpactGeneration {
+            + generate(): IEDImpact[]
+        }
+        
+        class BreakersMapGeneration {
+            + generate(): Map
+        }
+        
+        class SubstationMeasuresGenearation {
+            + generate(): SubstationMeasures[]
+        }
+        
+        class SubstationMeasuresPerYearGeneration {
+            + generate(): SubstationMeasuresPerYear[]
+        }
+
+        class IED {
+            - protections: Protection[]
+            - impact: IEDImpact
+        }
+        
+        class Protection {
+            - type: ProtectionType
+            - breaker: Breaker
+        }
+        
+        class Breaker {
+            - status: boolean
+        }
+        
+        class ProtectionsSet {
+            - protections: Protection[]
+        }
+    
+        class SubstationMeasures {
+            - type: String
+        }
+        
+        class SubstationMeasuresPerYear {
+            - year: int
+            - measures: SubstationMeasures[]
+        }
+        
+        class ImprosedMeasures {
+            - measures: SubstationMeasures[]
+        }
+
+        enum EquipmentType {
+            BUS
+            LINE
+            TRANSFORMER
+        }
+        
+' Application to Business Logic
+Main --> ReliabilityCalculation: calculates
+
+' Calculation Engine
+ReliabilityCalculation --> GeneralCoefficients: uses
+ReliabilityCalculation --> FailureCoefficients: uses
+ReliabilityCalculation --> OverCoefficients: uses
+ReliabilityCalculation --> FalseCoefficients: uses
+ReliabilityCalculation --> ProbabilityUnion: uses
+ReliabilityCalculation --> MockUndersupplyCalculation: uses
+
+' Initialization Engine
+Main --> IEDImpactGeneration: initializes
+Main --> BreakersMapGeneration: initializes
+Main --> SubstationMeasuresGenearation: initializes
+Main --> SubstationMeasuresPerYearGeneration: initializes
+
+' To Data Layer
+IEDImpactGeneration --> IED: generates
+BreakersMapGeneration --> Breaker: generates
+SubstationMeasuresGenearation --> SubstationMeasures: generates
+SubstationMeasuresPerYearGeneration --> SubstationMeasuresPerYear: generates
+
+' Equipment relationships
+IED --> Protection: contains
+ProtectionsSet --> Protection: contains
+Protection --> Breaker: uses
+
+' Measures relationships
+SubstationMeasuresPerYear --> SubstationMeasures: contains
+ImprosedMeasures --> SubstationMeasures: contains
+
+@enduml
